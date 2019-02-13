@@ -1,0 +1,32 @@
+#include<iostream>
+using namespace std;
+ class rec
+ {
+ 	public: int l,b;
+ 	public: void getdata();
+	        void per();
+ 	        void area();
+ };
+ void rec::getdata()
+ {
+ 	cout<<"Enter the length";
+ 	cin>>l;
+ 	cout<<"Enter the breadth";
+ 	cin>>b;
+ }
+ void rec::area()
+ {
+ 	cout<<"area of rectangle= "<<l*b;
+ }
+ void rec::per()
+ {
+ 	cout<<"perimiter of rectangle= "<<2*(l+b);
+ }
+ int main()
+ {
+ 	rec p;
+ 	p.getdata();
+ 	p.area();
+ 	p.per();
+ 	return 0;
+ }
