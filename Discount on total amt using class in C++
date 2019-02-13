@@ -1,0 +1,35 @@
+#include<iostream>
+using namespace std;
+class bill
+{
+	public: void dis(int tot);
+	        void total(int b,int q);
+};
+
+void bill::total(int b,int q)
+{
+	bill o;
+	int tot;
+	tot=b*q;
+	if(tot>5000)
+	{
+		o.dis(tot);
+	}
+	else cout<<"Total Amount= "<<tot;
+}
+void bill::dis(int tot)
+{
+	int d;
+	d=tot-((tot*5)/100);
+	cout<<"Total amount after giving the discount="<<d;
+}
+int main()
+{
+	int bil,qty;
+	cout<<"enter the amt=";
+	cin>>bil;
+	cout<<"\n enter the qty=";
+	cin>>qty;
+	bill o;
+	o.total(bil,qty);
+}
