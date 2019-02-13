@@ -1,0 +1,23 @@
+#include<iostream>
+using namespace std;
+class 
+int main()
+{
+int a,b,c,hcf,lcm;
+cout<< "\n Enter first no.(condition it should be less than second number) : ";
+cin>>a;
+cout<< "\n Enter sec. no. : ";
+cin>>b;
+for(int i=0;i<=a;i++)
+{
+	if(x%i==0 && y%i==0)
+	{
+		hcf=i;
+	}
+}
+cout<<"\n hcf="<<hcf;
+c=a*b;
+lcm=c/hcf;
+cout<<"\n lcm="<<lcm;
+return 0;
+}
