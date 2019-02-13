@@ -1,0 +1,40 @@
+#include<iostream>
+using namespace std;
+class a {
+int x, y;
+public: void get(int q, int p) {
+x=q;
+y=p;
+}
+void display();
+void operator <(a &);
+};
+void a::display() {
+cout<<"\n x="<<x<<" y="<<y;
+}
+void a::operator<(a &c) {
+ a temp;
+ if(c.s1.x<c.s2.x)
+ {
+ temp.x=c.s1.x;
+ }
+ else {
+ temp.x=d.x;
+ }
+ if(c.y<d.y)
+ {
+ temp.y=c.y;
+ }
+ else {
+ temp.y=d.y;
+ }
+ return temp; }
+int main() {
+ a s1,s2,s3;
+ s1.get(20,40);
+ s2.get(10,50);
+ s1.display();
+ s2.display();
+ s3=s1<s2;
+s3.display();
+ }
