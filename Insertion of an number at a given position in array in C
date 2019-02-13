@@ -1,0 +1,36 @@
+#include<stdio.h>
+#include<conio.h>
+int main()
+{
+	int a,i,c,d;
+	printf("enter number of element");
+	scanf("%d",&a);
+	int b[a+1];
+	
+	for(i=0;i<a;i++)
+	{
+		printf("enter the %d element",i);
+		scanf("%d",&b[i]);
+	}
+	
+	for(i=0;i<a;i++)
+	{
+		printf("\nThe %d element = %d",i,b[i]);
+	}
+	printf("\nin which position to insert");
+	scanf("%d",&c);
+	printf("\nEnter the number=");
+	scanf("%d",&d);
+	
+	for(i=a;i>=c;i--)
+	{
+		b[i+1]=b[i];
+	}
+	b[c]=d;
+	for(i=0;i<a+1;i++)
+	{
+		printf("\nThe %d element = %d",i,b[i]);
+	}
+	
+	return 0;
+}
