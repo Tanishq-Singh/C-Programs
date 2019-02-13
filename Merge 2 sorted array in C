@@ -1,0 +1,63 @@
+#include<stdio.h>
+#include<conio.h>
+int main()
+{
+	int a,c,i,j,k;
+	printf("enter number of element in 1st array");
+	scanf("%d",&a);
+	int b[a];
+	int e[a+c];
+	for(i=0;i<a;i++)
+	{
+		printf("enter the %d element",i);
+		scanf("%d",&b[i]);
+	}
+	
+	printf("enter number of element in 2nd array");
+	scanf("%d",&c);
+	int d[c];
+	
+	for(i=0;i<c;i++)
+	{
+		printf("enter the %d element",i);
+		scanf("%d",&d[i]);
+	}
+	
+	i=0,j=0,k=0;
+	
+	while(i<a && j<c)
+	{
+		if(b[i]<d[j])
+		{
+			e[k]=b[i];
+			i++;
+			k++;
+		}
+		else{
+			e[k]=d[j];
+			j++;
+			k++;
+		}
+	}
+	
+	while(i<a)
+	{
+		e[k]=b[i];
+		i++;
+		k++;
+	}
+	
+	while(j<c)
+	{
+		e[k]=d[j];
+		j++;
+		k++;
+	}
+	
+	for(i=0;i<a+c;i++){
+		printf("%d",e[i]);
+	}
+	
+	return 0;
+	
+}
