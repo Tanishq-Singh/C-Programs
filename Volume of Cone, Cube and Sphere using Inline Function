@@ -1,0 +1,24 @@
+#include<iostream>
+using namespace std;
+inline float cube(int n)
+{
+	return(n*n*n);
+}
+inline float sphere(int s)
+{
+	return((4*3.14*s*s*s)/3);
+}
+inline float cone(int c, int h)
+{
+	return((1*3.14*c*c*h)/3);
+}
+int main()
+{
+	float n,h;
+	cout<<"enter radios and hieght";
+	cin>>n>>h;
+	cout<<"\nVolume of cube="<<cube(n);
+  cout<<"\nVolume of sphere="<<sphere(n);
+  cout<<"\nVolume of cone="<<cone(n,h);
+    
+}
