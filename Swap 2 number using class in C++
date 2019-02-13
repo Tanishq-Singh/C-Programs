@@ -1,0 +1,53 @@
+#include<iostream>
+using namespace std;
+class B;
+class A
+{
+	int n1;
+	public:void getdata();
+	       friend void swap(A,B);
+	        friend void max(A,B);
+};
+class B
+{
+	int n2;
+	public:void getdata();
+	       friend void swap(A,B);
+	       friend void max(A,B);
+};
+void A::getdata()
+{
+	cout<<"Enter Number 1=";
+	cin>>n1;
+}
+void B::getdata()
+{
+	cout<<"Enter Number 2=";
+	cin>>n2;
+}
+void swap(A x,B y)
+{
+	int temp;
+	temp=x.n1;
+	x.n1=y.n2;
+	y.n2=temp;
+	cout<<"Values after swapping...\n";
+	cout<<"n1="<<x.n1<<" n2="<<y.n2;
+}
+void max(A d,B e)
+{
+	if(d.n1>e.n2)
+	          cout<<d.n1<<"is Larger";
+	else
+	        cout<<e.n2<<"is larger";
+}
+int main()
+{
+	A p;
+	B q;
+	p.getdata();
+	q.getdata();
+	swap(p,q);
+	max(p,q);
+	return 0;
+}
