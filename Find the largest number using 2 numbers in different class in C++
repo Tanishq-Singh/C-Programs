@@ -1,0 +1,37 @@
+#include<iostream>
+using namespace std;
+class xyz;
+class abc
+{
+	int x;
+	public: void getdata()
+	{
+		cin>>x;
+	}
+	friend void cmp(abc, xyz);
+};
+class xyz
+{
+	int y;
+	public: void getdata()
+	{
+		cin>>y;
+	}
+	friend void cmp(abc,xyz);
+};
+void cmp(abc a,xyz b)
+{
+	if(a.x>b.y)
+	{
+		cout<<"The number greater is="<<a.x;
+	}
+	else cout<<"The number greater is="<<b.y;
+}
+int main()
+{
+	abc a1;
+	xyz b1;
+	a1.getdata();
+	b1.getdata();
+	cmp(a1,b1);
+}
